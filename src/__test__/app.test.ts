@@ -1,7 +1,4 @@
-jest.mock("discord.js");
-
 import Discord from "discord.js";
-
 
 describe("Demonstrate issue", () => {
     it('runs successfully', () => {
