@@ -1,0 +1,47 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "author": "Robert Smieja",
+  "license": "Apache-2.0",
+  "main": "lib/app",
+  "types": "lib/app",
+  "engines": {
+    "node": ">=10.14.1",
+    "npm": ">=6.4.1"
+  },
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.11",
+    "@types/node": "^10.12.18",
+    "jest": "^23.6.0",
+    "run-script-os": "^1.0.5",
+    "ts-jest": "^23.10.5",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  },
+  "scripts": {
+    "build": "npm npm run build:js",
+    "build:js": "tsc",
+    "build:js:watch": "tsc -w",
+    "build:watch": "pm run build:js:watch",
+    "debug": "run-os-script",
+    "debug:darwin": "node $NODE_DEBUG_OPTION lib/app.js",
+    "debug:freebsd": "node $NODE_DEBUG_OPTION lib/app.js",
+    "debug:linux": "node $NODE_DEBUG_OPTION lib/app.js",
+    "debug:sunos": "node $NODE_DEBUG_OPTION lib/app.js",
+    "debug:win32": "node %NODE_DEBUG_OPTION% lib/app.js",
+    "debug:watch": "run-os-script",
+    "debug:watch:darwin": "nodemon $NODE_DEBUG_OPTION lib/app.js",
+    "debug:watch:freebsd": "nodemon $NODE_DEBUG_OPTION lib/app.js",
+    "debug:watch:linux": "nodemon $NODE_DEBUG_OPTION lib/app.js",
+    "debug:watch:sunos": "nodemon $NODE_DEBUG_OPTION lib/app.js",
+    "debug:watch:win32": "nodemon %NODE_DEBUG_OPTION% lib/app.js",
+    "start": "node lib/app.js",
+    "test": "jest",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch"
+  },
+  "private": true
+}
