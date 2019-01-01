@@ -22,7 +22,7 @@
     "typescript": "^3.2.2"
   },
   "scripts": {
-    "build": "npm npm run build:js",
+    "build": "npm run build:js",
     "build:js": "tsc",
     "build:js:watch": "tsc -w",
     "build:watch": "pm run build:js:watch",
